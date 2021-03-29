@@ -1,0 +1,23 @@
+eps_start: 0.99
+eps_end: 0.05
+discount: 0.999
+sim_heatup: 20
+sim_max_steps: 3000
+sim_steps_per_do_step: 6
+yellow_phase_duration: 3
+gui: disable
+state_type: density
+reward_type: wt_max
+replay_size: 50000
+batch_size: 512
+optimizer: rmsprop
+layers: [128, 64, 16]
+logs_root_path: ./logs/
+experiment_res_path: ./logs/compare/density__wt_max/
+capture_each: -1
+sim_file: ./networks/double/Israel_zipping/network.sumocfg
+episodes: 150
+eps_decay: 100
+target_update: 50
+rl_algo: fixed_q_targets
+grad_clip: 1

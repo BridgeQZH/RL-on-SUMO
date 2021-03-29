@@ -51,8 +51,8 @@ class SumoEnv:
 
         self.capture_each = args.capture_each # take screenshots of entire episode each 'capture' episode.
         self.gui = args.gui
-        sumoBinary = os.path.join(os.environ['SUMO_HOME'], 'bin', 'sumo.exe')
-        sumoBinary_gui = os.path.join(os.environ['SUMO_HOME'], 'bin', 'sumo-gui.exe')
+        sumoBinary = os.path.join(os.environ['SUMO_HOME'], 'bin', 'sumo')
+        sumoBinary_gui = os.path.join(os.environ['SUMO_HOME'], 'bin', 'sumo-gui')
         self.sumoCmd = [sumoBinary, '-c', self.path_to_sim_file, '--no-warnings'] #,'--no-step-log',
         self.sumoCmd_gui = [sumoBinary_gui, '-c', self.path_to_sim_file, '--start', '--quit-on-end']
 
